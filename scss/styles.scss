@@ -1,0 +1,297 @@
+@import 'extra.scss';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $tipografia;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+[id] {
+    scroll-margin-top: 10ex;
+}
+
+.boton {
+    position: relative;
+    top: 20px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: $color-terciario;
+    color: $color-link;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: $body-color;
+}
+
+.conteiner__all {
+    max-width: 1020px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto auto;
+}
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    width: 1000px;
+    z-index: 999;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .conteiner__secciones {
+        display: flex;
+        flex-direction: row;
+        .seccion {
+            margin: 0px 10px;
+        }
+    }
+}
+
+//--TRABAJANDO CON EL MAIN--//
+.main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 900px);
+    gap: 30px;
+}
+
+//--Trabajando con el home--//
+.home {
+    display: grid;
+    grid-template-columns: 120px 900px;
+    grid-template-rows: 550px 50px;
+    .conteiner__redes {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .redes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .red {
+                margin: 10px 0px;
+                a {
+                    i {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conteiner__presentacion {
+    grid-column: 2 / 3;
+    grid-row: 1 / 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .presentacion__informacion {
+        .presentacion__h2 {
+            font-size: 45px;
+        }
+        .presentacion__h3 {
+            font-size: 35px;
+            color: grey;
+        }
+        .presentacion__informacion {
+            font-size: 25px;
+        }
+    }
+    .presentacion__imagen {
+        width: 250px;
+        height: 250px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 500px;
+        }
+    }
+}
+
+//--Trabajando con la sección "Sobre mí"
+.SobreMi {
+    grid-row: 2 / 3;
+    grid-column: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .SobreMi__h2 {
+        font-size: 25px;
+    }
+}
+
+.conteiner__SobreMi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70%;
+    .SobreMi__imagen {
+        width: 400px;
+        height: 400px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+        }
+    }
+    .SobreMi__informacion {
+        width: 500px;
+        margin-left: 25px;
+        .informacion {
+            font-size: 25px;
+        }
+        .cv {
+            width: 160px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//--Trabajando con la sección "Conocimientos"--//
+//--Es Conocimientos pero las etiquetas HTML estan con clases Habilidad--//
+.Habilidades {
+    grid-row: 3 / 4;
+    grid-column: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .habilidades__h2 {
+        font-size: 25px;
+    }
+}
+
+.conteiner__habilidad {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+    position: relative;
+    top: 100px;
+    .habilidad__conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .conteiner__h2--icono {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            i {
+                font-size: 23px;
+                margin-right: 10px;
+            }
+        }
+        .conteiner__habilidades {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .habilidad {
+                width: 100%;
+                height: 60px;
+                .habilidad__texto {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .linea__gris {
+                    width: 100%;
+                    height: 10px;
+                    background-color: grey;
+                    .linea__roja {
+                        height: 10px;
+                        background-color: $color-terciario;
+                    }
+                    .HTML {
+                        width: 70%;
+                    }
+                    .CSS {
+                        width: 60%;
+                    }
+                    .JAVASCRIPT {
+                        width: 50%;
+                    }
+                    .CPLUSPLUS {
+                        width: 70%;
+                    }
+                    .SQLSERVER {
+                        width: 50%;
+                    }
+                    .GIT {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--Trabajando con la sección "Proyectos"--//
+.Proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .Proyectos__h2 {
+        font-size: 25px;
+    }
+}
+
+.conteiner__proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 350px);
+    gap: 20px;
+    position: relative;
+    top: 100px;
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .proyecto__imagen {
+            margin-top: 10px;
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

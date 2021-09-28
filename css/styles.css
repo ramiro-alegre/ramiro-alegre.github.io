@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Arial";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+[id] {
+  scroll-margin-top: 10ex;
+}
+
+.boton {
+  position: relative;
+  top: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background-color: #dd143c;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.conteiner__all {
+  max-width: 1020px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto;
+}
+
+.header {
+  grid-row: 1/2;
+  grid-column: 1/1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  width: 1000px;
+  z-index: 999;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.navbar .conteiner__secciones {
+  display: flex;
+  flex-direction: row;
+}
+.navbar .conteiner__secciones .seccion {
+  margin: 0px 10px;
+}
+
+.main {
+  grid-row: 2/3;
+  grid-column: 1/1;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, 900px);
+  gap: 30px;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 120px 900px;
+  grid-template-rows: 550px 50px;
+}
+.home .conteiner__redes {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .conteiner__redes .redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.home .conteiner__redes .redes .red {
+  margin: 10px 0px;
+}
+.home .conteiner__redes .redes .red a i {
+  font-size: 30px;
+}
+
+.conteiner__presentacion {
+  grid-column: 2/3;
+  grid-row: 1/1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.conteiner__presentacion .presentacion__informacion .presentacion__h2 {
+  font-size: 45px;
+}
+.conteiner__presentacion .presentacion__informacion .presentacion__h3 {
+  font-size: 35px;
+  color: grey;
+}
+.conteiner__presentacion .presentacion__informacion .presentacion__informacion {
+  font-size: 25px;
+}
+.conteiner__presentacion .presentacion__imagen {
+  width: 250px;
+  height: 250px;
+}
+.conteiner__presentacion .presentacion__imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 500px;
+}
+
+.SobreMi {
+  grid-row: 2/3;
+  grid-column: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SobreMi .SobreMi__h2 {
+  font-size: 25px;
+}
+
+.conteiner__SobreMi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70%;
+}
+.conteiner__SobreMi .SobreMi__imagen {
+  width: 400px;
+  height: 400px;
+}
+.conteiner__SobreMi .SobreMi__imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+.conteiner__SobreMi .SobreMi__informacion {
+  width: 500px;
+  margin-left: 25px;
+}
+.conteiner__SobreMi .SobreMi__informacion .informacion {
+  font-size: 25px;
+}
+.conteiner__SobreMi .SobreMi__informacion .cv {
+  width: 160px;
+}
+.conteiner__SobreMi .SobreMi__informacion .cv a {
+  width: 100%;
+}
+
+.Habilidades {
+  grid-row: 3/4;
+  grid-column: 1/1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Habilidades .habilidades__h2 {
+  font-size: 25px;
+}
+
+.conteiner__habilidad {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  position: relative;
+  top: 100px;
+}
+.conteiner__habilidad .habilidad__conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__h2--icono {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__h2--icono i {
+  font-size: 23px;
+  margin-right: 10px;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad {
+  width: 100%;
+  height: 60px;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .habilidad__texto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris {
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .linea__roja {
+  height: 10px;
+  background-color: #dd143c;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .HTML {
+  width: 70%;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .CSS {
+  width: 60%;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .JAVASCRIPT {
+  width: 50%;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .CPLUSPLUS {
+  width: 70%;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .SQLSERVER {
+  width: 50%;
+}
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .GIT {
+  width: 50%;
+}
+
+.Proyectos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Proyectos .Proyectos__h2 {
+  font-size: 25px;
+}
+
+.conteiner__proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: repeat(2, 350px);
+  gap: 20px;
+  position: relative;
+  top: 100px;
+}
+.conteiner__proyectos .proyecto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteiner__proyectos .proyecto .proyecto__imagen {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.conteiner__proyectos .proyecto .proyecto__imagen img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */
