@@ -324,40 +324,13 @@ body {
             flex-direction: column;
             align-items: center;
             width: 150px;
-            .opcion__imagen {
+            .opcion__link {
                 height: 30px;
                 margin: 10px 0px;
             }
-            .opcion__texto {
-                position: absolute;
-                bottom: 130px;
-                font-size: 12px;
-                opacity: 0;
-                z-index: 20;
-                cursor: default;
+            .opcion__imagen {
+                height: 100%;
             }
-        }
-        .footer__opcion::before {
-            content: '';
-            position: relative;
-            bottom: 30px;
-            background-color: #f0ad4e;
-            width: 200px;
-            height: 50px;
-            opacity: 0;
-        }
-        .footer__opcion::after {
-            content: '';
-            position: absolute;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-right: 30px solid transparent;
-            border-top: 30px solid #f0ad4e;
-            border-left: 30px solid transparent;
-            border-bottom: 30px solid transparent;
-            z-index: 10;
-            opacity: 0;
         }
     }
 }
