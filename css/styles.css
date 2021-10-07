@@ -43,9 +43,8 @@ body {
 }
 
 .conteiner__all {
-  max-width: 1020px;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1020px;
   grid-template-rows: 100px auto auto;
 }
 
@@ -57,8 +56,67 @@ body {
   align-items: center;
   position: fixed;
   top: 20px;
-  width: 1000px;
+  min-width: 1000px;
   z-index: 999;
+}
+.header .hamburger {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  top: 30px;
+  height: 30px;
+  width: 30px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  z-index: 1002;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header .hamburger.is-active {
+  background-color: none;
+}
+.header ._layer {
+  background: #333333;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  width: 28px;
+  height: 4px;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+.header .hamburger:hover .-top {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.header .hamburger:hover .-bottom {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.header .hamburger.is-active .-top {
+  -webkit-transform: translateY(200%) rotate(45deg) !important;
+  -ms-transform: translateY(200%) rotate(45deg) !important;
+  transform: translateY(200%) rotate(45deg) !important;
+}
+.header .hamburger.is-active .-mid {
+  opacity: 0;
+}
+.header .hamburger.is-active .-bottom {
+  -webkit-transform: translateY(-200%) rotate(135deg) !important;
+  -ms-transform: translateY(-200%) rotate(135deg) !important;
+  transform: translateY(-200%) rotate(135deg) !important;
+}
+.header .menuppal.is_active {
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .navbar {
@@ -79,12 +137,14 @@ body {
   grid-row: 2/3;
   grid-column: 1/1;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(4, 900px);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(500px, 900px));
   gap: 30px;
 }
 
 .home {
+  grid-row: 1/2;
+  grid-column: 1/1;
   display: grid;
   grid-template-columns: 120px 900px;
   grid-template-rows: 550px 50px;
@@ -123,8 +183,8 @@ body {
   font-size: 35px;
   color: grey;
 }
-.conteiner__presentacion .presentacion__informacion .presentacion__informacion {
-  font-size: 25px;
+.conteiner__presentacion .presentacion__informacion .presentacion__texto {
+  font-size: 17px;
 }
 .conteiner__presentacion .presentacion__imagen {
   width: 250px;
@@ -145,6 +205,11 @@ body {
 }
 .SobreMi .SobreMi__h2 {
   font-size: 25px;
+}
+.SobreMi .conteiner__SobreMi .SobreMi__informacion .informacion {
+  text-indent: 6px;
+  font-size: 18px;
+  margin: 5px 0px;
 }
 
 .conteiner__SobreMi {
@@ -189,8 +254,8 @@ body {
 
 .conteiner__habilidad {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(2, minmax(250px, 400px));
+  grid-template-rows: repeat(2, minmax(200px, 300px));
   gap: 20px;
   position: relative;
   top: 100px;
@@ -261,6 +326,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-row: 4/5;
+  grid-column: 1/1;
 }
 .Proyectos .Proyectos__h2 {
   font-size: 25px;
@@ -268,11 +335,10 @@ body {
 
 .conteiner__proyectos {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
-  grid-template-rows: repeat(2, 350px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 350px));
   gap: 20px;
-  position: relative;
-  top: 100px;
+  margin: 100px 0px;
 }
 .conteiner__proyectos .proyecto {
   display: flex;
@@ -287,6 +353,16 @@ body {
 .conteiner__proyectos .proyecto .proyecto__imagen img {
   width: 100%;
   height: 100%;
+}
+.conteiner__proyectos .proyecto .proyecto__links {
+  margin-top: 5px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.conteiner__proyectos .proyecto .proyecto__links a {
+  font-size: 30px;
 }
 
 .footer {
@@ -304,8 +380,7 @@ body {
   width: 80%;
 }
 .conteiner__footer .footer__opciones {
-  position: relative;
-  top: 50px;
+  margin: 50px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

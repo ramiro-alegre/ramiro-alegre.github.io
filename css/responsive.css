@@ -1,0 +1,297 @@
+@media (max-width: 1124px) {
+  .conteiner__all {
+    grid-template-columns: 820px;
+  }
+
+  .header {
+    min-width: 820px;
+  }
+
+  .home {
+    grid-template-columns: 120px 700px;
+  }
+
+  .conteiner__presentacion .presentacion__informacion .presentacion__h2 {
+    font-size: 35px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__h3 {
+    font-size: 25px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__texto {
+    font-size: 15px;
+  }
+  .conteiner__presentacion .presentacion__imagen {
+    width: 200px;
+    height: 200px;
+  }
+
+  .conteiner__SobreMi .SobreMi__imagen {
+    width: 300px;
+    height: 300px;
+  }
+  .conteiner__SobreMi .SobreMi__informacion {
+    width: 400px;
+  }
+  .conteiner__SobreMi .SobreMi__informacion .informacion {
+    font-size: 14px !important;
+  }
+  .conteiner__SobreMi .SobreMi__informacion .cv {
+    width: 140px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 924px) {
+  .conteiner__all {
+    grid-template-columns: 620px;
+  }
+
+  .header {
+    min-width: 620px;
+  }
+  .header .h1__header {
+    font-size: 25px;
+  }
+  .header .hamburger {
+    left: 80%;
+    display: block;
+    z-index: 9999;
+  }
+
+  .navbar {
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: -500px;
+    transition: top 1s ease;
+  }
+  .navbar .conteiner__secciones {
+    padding: 40px 0px 10px 0px;
+    top: -10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .conteiner__secciones .seccion {
+    padding: 10px 0px;
+    transition: 0.5s;
+    font-weight: bold;
+  }
+  .navbar .conteiner__secciones .seccion:hover {
+    transform: scale(1.1);
+  }
+
+  .navbar__active {
+    top: -10px;
+  }
+
+  .main {
+    grid-template-columns: 620px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 500px;
+  }
+  .home .conteiner__redes {
+    grid-column: 1/1;
+    grid-row: 1/2;
+  }
+  .home .conteiner__redes .redes {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .home .conteiner__redes .redes .red {
+    margin: 0px 20px;
+  }
+  .home .conteiner__presentacion {
+    grid-column: 1/1;
+    grid-row: 2/3;
+    flex-direction: column;
+  }
+  .home .conteiner__presentacion .presentacion__informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteiner__SobreMi {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .conteiner__SobreMi .SobreMi__imagen {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .conteiner__SobreMi .SobreMi__informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .conteiner__SobreMi .SobreMi__informacion .informacion {
+    text-align: center;
+  }
+  .conteiner__SobreMi .SobreMi__informacion .cv {
+    width: 140px;
+    font-size: 14px;
+  }
+
+  .conteiner__proyectos .proyecto .proyecto__texto {
+    font-size: 15px;
+  }
+
+  .conteiner__footer .opcion__texto {
+    font-size: 13px;
+  }
+}
+@media (max-width: 744px) {
+  .conteiner__all {
+    grid-template-columns: 500px;
+  }
+
+  .header {
+    min-width: 500px;
+  }
+  .header .hamburger {
+    left: 77%;
+  }
+
+  .main {
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(3, minmax(500px, 900px)) 1fr;
+  }
+
+  .conteiner__proyectos {
+    grid-template-rows: repeat(auto-fit, minmax(250px, 375px));
+  }
+
+  .conteiner__footer .footer__h3 {
+    font-size: 14px;
+  }
+  .conteiner__footer .opcion__texto {
+    font-size: 11px;
+  }
+}
+@media (max-width: 590px) {
+  .conteiner__all {
+    grid-template-columns: 400px;
+  }
+
+  .header {
+    min-width: 400px;
+  }
+  .header .hamburger {
+    left: 79%;
+  }
+
+  .main {
+    grid-template-columns: 400px;
+  }
+
+  .conteiner__presentacion .presentacion__informacion .presentacion__h2 {
+    font-size: 30px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__h3 {
+    font-size: 20px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__texto {
+    font-size: 12px;
+  }
+  .conteiner__presentacion .presentacion__imagen {
+    width: 200px;
+    height: 200px;
+  }
+
+  .conteiner__habilidad {
+    grid-template-columns: minmax(250px, 400px);
+    grid-template-rows: repeat(2, minmax(200px, 300px));
+  }
+
+  .conteiner__proyectos {
+    grid-template-rows: repeat(auto-fit, minmax(250px, 323px));
+  }
+
+  .footer__opciones {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .footer__opciones .footer__opcion {
+    margin: 5px 0px;
+  }
+}
+@media (max-width: 450px) {
+  .conteiner__all {
+    grid-template-columns: 300px;
+  }
+
+  .header {
+    min-width: 300px;
+  }
+  .header .hamburger {
+    left: 75%;
+  }
+
+  .main {
+    grid-template-columns: 300px;
+  }
+
+  .conteiner__presentacion .presentacion__informacion .presentacion__h2 {
+    font-size: 25px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__h3 {
+    font-size: 15px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__texto {
+    font-size: 10px;
+  }
+
+  .SobreMi__informacion {
+    margin-left: 0px !important;
+  }
+
+  .conteiner__proyectos {
+    grid-template-rows: repeat(auto-fit, minmax(250px, 273px));
+  }
+}
+@media (max-width: 350px) {
+  .conteiner__all {
+    grid-template-columns: 250px;
+  }
+
+  .header {
+    min-width: 250px;
+  }
+  .header .hamburger {
+    left: 75%;
+  }
+
+  .main {
+    grid-template-columns: 250px;
+  }
+
+  .home {
+    grid-template-rows: 50px 500px;
+  }
+
+  .conteiner__presentacion .presentacion__informacion .presentacion__h2 {
+    font-size: 20px;
+  }
+  .conteiner__presentacion .presentacion__informacion .presentacion__texto {
+    text-align: center;
+  }
+
+  .conteiner__redes .redes .red a i {
+    font-size: 25px !important;
+  }
+
+  .conteiner__proyectos {
+    grid-template-rows: repeat(auto-fit, minmax(250px, 273px)) !important;
+  }
+  .conteiner__proyectos .proyecto .proyecto__texto {
+    text-align: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */
