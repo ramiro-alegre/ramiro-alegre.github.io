@@ -19,7 +19,7 @@ Esta es la segunda versión de mí Portfolio, cuenta con:
 
 ## Proyectos
 
-![Proyectos](https://user-images.githubusercontent.com/64865940/137190265-bf2d8409-8b53-438f-a1d6-99d07dd3df40.png)
+![Proyectos](https://user-images.githubusercontent.com/64865940/137213479-ad62e7b6-566a-460c-bbc5-af4eafe24fc3.png)
 
 
 ## Contactar 
