@@ -4,7 +4,7 @@ Esta es la segunda versión de mí Portfolio, cuenta con:
 
 ## Home 
 
-![Home](https://user-images.githubusercontent.com/64865940/137190224-fb1d44b0-1573-4a69-af45-6361a029cf36.png)
+![Home](https://user-images.githubusercontent.com/64865940/137219669-0054bc4c-c226-4d20-a818-44f001bb43cb.png)
 
 
 ## Sobre mí
