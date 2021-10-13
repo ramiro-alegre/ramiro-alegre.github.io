@@ -9,7 +9,7 @@ Esta es la segunda versión de mí Portfolio, cuenta con:
 
 ## Sobre mí
 
-![SobreMí](https://user-images.githubusercontent.com/64865940/137190235-fa4f327a-e1a8-4ebc-a058-46a6fad73b5f.png)
+![SobreMí](https://user-images.githubusercontent.com/64865940/137220258-1ff81c69-c06f-4fe0-b8ae-d88deb4857f5.png)
 
 
 ## Conocimientos
