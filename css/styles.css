@@ -236,9 +236,10 @@ body {
 }
 .conteiner__SobreMi .SobreMi__informacion .cv {
   width: 160px;
+  margin-top: 20px;
 }
 .conteiner__SobreMi .SobreMi__informacion .cv a {
-  width: 100%;
+  position: inherit;
 }
 
 .Habilidades {

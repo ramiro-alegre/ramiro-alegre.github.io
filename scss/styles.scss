@@ -248,8 +248,10 @@ body {
         }
         .cv {
             width: 160px;
+            margin-top: 20px;
             a {
-                width: 100%;
+                //Para que así el boton quede alineado con la imagen
+                position: inherit;
             }
         }
     }
