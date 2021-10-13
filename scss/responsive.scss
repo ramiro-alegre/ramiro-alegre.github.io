@@ -58,7 +58,6 @@
                 font-size: 25px;
             }
             .hamburger {
-                //top: 12px;
                 left: 80%;
                 display: block;
                 z-index: 9999;
@@ -177,6 +176,9 @@
         .main {
             grid-template-columns: 500px;
             grid-template-rows: repeat(3, minmax(500px, 900px)) 1fr;
+        }
+        .home {
+            grid-template-rows: 70px 500px;
         }
         //--Proyectos--// 
         .conteiner__proyectos {

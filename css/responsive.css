@@ -165,6 +165,10 @@
     grid-template-rows: repeat(3, minmax(500px, 900px)) 1fr;
   }
 
+  .home {
+    grid-template-rows: 70px 500px;
+  }
+
   .conteiner__proyectos {
     grid-template-rows: repeat(auto-fit, minmax(250px, 375px));
   }
