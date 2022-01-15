@@ -311,6 +311,9 @@ body {
 .conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .JAVASCRIPT {
   width: 50%;
 }
+.conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .ANGULAR {
+  width: 25%;
+}
 .conteiner__habilidad .habilidad__conteiner .conteiner__habilidades .habilidad .linea__gris .CPLUSPLUS {
   width: 60%;
 }
