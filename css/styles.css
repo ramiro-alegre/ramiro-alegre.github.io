@@ -66,15 +66,12 @@ body {
   top: 30px;
   height: 30px;
   width: 30px;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   z-index: 1002;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .header .hamburger.is-active {
@@ -87,32 +84,22 @@ body {
   width: 28px;
   height: 4px;
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
   transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 .header .hamburger:hover .-top {
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 .header .hamburger:hover .-bottom {
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
   transform: translateY(100%);
 }
 .header .hamburger.is-active .-top {
-  -webkit-transform: translateY(200%) rotate(45deg) !important;
-  -ms-transform: translateY(200%) rotate(45deg) !important;
   transform: translateY(200%) rotate(45deg) !important;
 }
 .header .hamburger.is-active .-mid {
   opacity: 0;
 }
 .header .hamburger.is-active .-bottom {
-  -webkit-transform: translateY(-200%) rotate(135deg) !important;
-  -ms-transform: translateY(-200%) rotate(135deg) !important;
   transform: translateY(-200%) rotate(135deg) !important;
 }
 .header .menuppal.is_active {
@@ -169,12 +156,12 @@ body {
 }
 
 .conteiner__presentacion {
-  grid-column: 2/3;
+  grid-column: 2/2;
   grid-row: 1/1;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
 }
 .conteiner__presentacion .presentacion__informacion .presentacion__h2 {
   font-size: 45px;
@@ -223,7 +210,8 @@ body {
   height: 400px;
 }
 .conteiner__SobreMi .SobreMi__imagen img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 50px;

@@ -176,12 +176,12 @@ body {
 }
 
 .conteiner__presentacion {
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
     grid-row: 1 / 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     .presentacion__informacion {
         .presentacion__h2 {
             font-size: 45px;
