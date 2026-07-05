@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import Seo from "../components/Seo.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Portfolio de Ramiro Alegre — Desarrollador Full Stack con foco en backend y .NET.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <Seo title={title} description={description} />
+  </head>
+  <body
+    class="flex min-h-screen flex-col bg-white font-sans text-slate-800 antialiased"
+  >
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-brand focus:px-4 focus:py-2 focus:text-white"
+    >
+      Saltar al contenido
+    </a>
+
+    <Header />
+
+    <main id="contenido" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

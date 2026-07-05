@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<meta name="description" content={description} />
+<meta name="author" content="Ramiro Alegre" />
+
+<meta name="theme-color" content="#e11d48" />
+
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Ramiro Alegre" />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />

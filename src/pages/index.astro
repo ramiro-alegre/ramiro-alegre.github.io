@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Icon from "../components/Icon.astro";
+import CvButton from "../components/CvButton.astro";
+import { projects } from "../data/projects";
+
+const featured = projects.slice(0, 3);
+---
+
+<Layout title="Ramiro Alegre — Desarrollador Full Stack">
+  <section class="mx-auto max-w-5xl px-6 pb-16 pt-20 sm:pt-28">
+    <p class="text-sm font-medium uppercase tracking-widest text-brand">
+      Desarrollador Full Stack · Buenos Aires
+    </p>
+    <h1
+      class="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl"
+    >
+      Hola, soy Ramiro.
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+      Con 4 años de experiencia, construyo aplicaciones web de principio a fin.
+      Me especializo en el backend con C# y .NET —diseño de APIs y lógica de
+      negocio— y lo combino con Angular en el front.
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-center gap-4">
+      <a
+        href="/conocimientos"
+        class="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
+      >
+        Conocimientos
+        <Icon name="arrow" class="h-4 w-4" />
+      </a>
+      <CvButton />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-16">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl font-bold text-slate-900">Algunos proyectos</h2>
+      <a
+        href="/proyectos"
+        class="hidden text-sm font-medium text-brand hover:text-brand-dark sm:inline"
+      >
+        Ver todos →
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((p) => <ProjectCard project={p} />)}
+    </div>
+
+    <a
+      href="/proyectos"
+      class="mt-8 inline-block text-sm font-medium text-brand hover:text-brand-dark sm:hidden"
+    >
+      Ver todos →
+    </a>
+  </section>
+</Layout>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ramiroalegre.com.ar/sitemap-index.xml
