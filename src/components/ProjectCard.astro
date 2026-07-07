@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article
+  class="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow hover:shadow-lg"
+>
+  <div class="aspect-video overflow-hidden bg-slate-100">
+    <Image
+      src={project.image}
+      alt={`Captura del proyecto ${project.name}`}
+      width={640}
+      class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col p-5">
+    <h3 class="text-lg font-semibold text-slate-900">{project.name}</h3>
+    <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
+      {project.description}
+    </p>
+
+    <ul class="mt-4 flex flex-wrap gap-2">
+      {
+        project.technologies.map((t) => (
+          <li class="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-medium text-brand-dark">
+            {t}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-4 flex items-center gap-4 text-slate-500">
+      {
+        project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Repositorio de ${project.name}`}
+            class="transition-colors hover:text-brand"
+          >
+            <Icon name="github" />
+          </a>
+        )
+      }
+      {
+        project.backend && (
+          <a
+            href={project.backend}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Backend de ${project.name}`}
+            class="transition-colors hover:text-brand"
+          >
+            <Icon name="database" />
+          </a>
+        )
+      }
+      {
+        project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Demo de ${project.name}`}
+            class="transition-colors hover:text-brand"
+          >
+            <Icon name="external" />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>

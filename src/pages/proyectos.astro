@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<Layout
+  title="Proyectos — Ramiro Alegre"
+  description="Proyectos de Ramiro Alegre: APIs, backend, prácticas y experimentos."
+>
+  <section class="mx-auto max-w-5xl px-6 py-20">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-900">Proyectos</h1>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+</Layout>

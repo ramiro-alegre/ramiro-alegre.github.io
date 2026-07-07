@@ -1,0 +1,48 @@
+---
+import Icon from "./Icon.astro";
+
+const socials = [
+  { href: "https://github.com/ramiro-alegre", label: "GitHub", icon: "github" },
+  {
+    href: "https://www.linkedin.com/in/ramiroalegrejr/",
+    label: "LinkedIn",
+    icon: "linkedin",
+  },
+  { href: "https://codepen.io/Rama22", label: "CodePen", icon: "codepen" },
+] as const;
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-200 bg-slate-50">
+  <div
+    class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-8 sm:flex-row sm:justify-between"
+  >
+    <p class="text-sm text-slate-500">
+      © <span id="footer-year">{year}</span> Ramiro Alegre. Hecho con Astro.
+    </p>
+
+    <ul class="flex items-center gap-5">
+      {
+        socials.map((r) => (
+          <li>
+            <a
+              href={r.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={r.label}
+              class="text-slate-400 transition-colors hover:text-brand"
+            >
+              <Icon name={r.icon} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const yearEl = document.getElementById("footer-year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+</script>
