@@ -11,6 +11,7 @@ const contactMethods = [
     copy: "alegre.ramiro222@gmail.com",
     icon: "mail",
     external: false,
+    color: "#334155",
   },
   {
     label: "LinkedIn",
@@ -19,6 +20,7 @@ const contactMethods = [
     copy: "https://www.linkedin.com/in/ramiroalegrejr/",
     icon: "linkedin",
     external: true,
+    color: "#0A66C2",
   },
   {
     label: "GitHub",
@@ -27,6 +29,7 @@ const contactMethods = [
     copy: "https://github.com/ramiro-alegre",
     icon: "github",
     external: true,
+    color: "#181717",
   },
 ] as const;
 ---
@@ -48,7 +51,7 @@ const contactMethods = [
               rel={m.external ? "noopener noreferrer" : undefined}
               class="flex flex-1 items-center gap-4"
             >
-              <span class="text-brand">
+              <span style={`color: ${m.color}`}>
                 <Icon name={m.icon} class="h-6 w-6" />
               </span>
               <span>
